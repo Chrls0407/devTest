@@ -56,7 +56,7 @@ function App() {
         </Button>
       </div>
       <div className="bg-black p-8 flex flex-col gap-4 items-center">
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-4">
           <div className="text-white flex w-auto items-center gap-4">
             <span className="font-[900] text-[50px]">LATEST</span>{" "}
             <span className="text-[50px]">VIDEOS</span>
@@ -72,6 +72,9 @@ function App() {
             <VideoCard />
           </div>
         </div>
+        <Button className="border-[#E60000] border rounded text-white font-[900] text-[1.2rem]">
+          VIEW ALL VIDEOS
+        </Button>
       </div>
       <div className="bg-[#111111] p-8 flex flex-col gap-4 items-center">
         <div>
@@ -97,9 +100,6 @@ function App() {
             <CarouselNext /> */}
           </Carousel>
         </div>
-        <Button className="text-[2rem]   text-black font-[900] h-auto bg-[#FFAC5C] hover:bg-[#FFAC5C]/90 rounded-xl  ">
-          <Lock className="h-10 w-10 mr-2" /> GET INSTANT ACCESS
-        </Button>
       </div>
       <Footer />
     </div>
