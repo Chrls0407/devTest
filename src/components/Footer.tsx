@@ -1,4 +1,5 @@
 import rectangle1 from "@/assets/rectangle1.png";
+import { Twitter, Instagram } from "lucide-react";
 
 const FooterNavs1 = [
   { name: "home", label: "Home" },
@@ -52,8 +53,14 @@ const Footer = () => {
             elementum enim sollicitudin sed. Ut finibus pulvinar interdum. Proin
             sed neque in nisl ultrices euismod. Ut mattis turpis sed odio.
           </p>
+          <div className="flex gap-4">
+            <Twitter className="h-10 w-10 text-[#FFC653]" />
+            <Instagram className="h-10 w-10 text-[#FFC653]" />
+          </div>
         </div>
       </div>
+
+      <div className="flex flex-col items-end"></div>
 
       <div className="flex flex-col gap-8">
         <img src={rectangle1} alt="" />
