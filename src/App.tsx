@@ -2,6 +2,7 @@ import { Lock } from "lucide-react";
 import Header from "./components/Header";
 import { Button } from "./components/ui/button";
 import Rectangle6 from "@/assets/Rectangle6.png";
+import Rectangle2 from "@/assets/rectangle2.png";
 import VideoCard from "./components/reusables/VideoCard";
 import {
   Carousel,
@@ -17,9 +18,9 @@ function App() {
     <div className="">
       <Header />
       {/* Big welcome banner / Image */}
-      <div className="w-full flex items-center flex-col justify-end py-20 bg-[url('@/assets/image1.png')] h-[calc(100vh-90px)] bg-auto">
-        <Button className="text-[3.5rem] text-black font-[900] h-auto bg-[#FFAC5C] hover:bg-[#FFAC5C]/90 rounded-xl  ">
-          <Lock className="h-16 w-16 mr-2" /> GET INSTANT ACCESS
+      <div className="w-full flex items-center flex-col justify-end py-20 bg-[url('@/assets/image1.png')] h-[calc(100vh-90px)] ">
+        <Button className="text-[1rem] md:text-[3.5rem] text-black font-[900] h-auto bg-[#FFAC5C] hover:bg-[#FFAC5C]/90 rounded-xl  ">
+          <Lock className="md:h-16 md:w-16 mr-2" /> GET INSTANT ACCESS
         </Button>
       </div>
 
@@ -43,7 +44,9 @@ function App() {
           <div className="text-white flex w-auto items-center  gap-4">
             <span className="font-[900] text-[50px]">TOP</span>{" "}
             <span className="text-[50px]">VIDEOS</span>
-            <img src={Rectangle6} alt="" className="h-4 w-full" />
+            <div className="w-full hidden md:block">
+              <img src={Rectangle6} alt="" className=" object-contain " />
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -60,7 +63,9 @@ function App() {
           <div className="text-white flex w-auto items-center gap-4">
             <span className="font-[900] text-[50px]">LATEST</span>{" "}
             <span className="text-[50px]">VIDEOS</span>
-            <img src={Rectangle6} alt="" className="h-4 w-full" />
+            <div className="w-full">
+              <img src={Rectangle2} alt="" className="hidden md:block" />
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -81,14 +86,16 @@ function App() {
           <div className="text-white flex w-auto items-center  gap-4">
             <span className="font-[900] text-[50px]">UPCOMING</span>{" "}
             <span className="text-[50px]">VIDEOS</span>
-            <img src={Rectangle6} alt="" className="h-4 w-full" />
+            <div className="w-full">
+              <img src={Rectangle2} alt="" className="hidden md:block" />
+            </div>
           </div>
 
           {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <VideoCard />
             <VideoCard />
           </div> */}
-          <Carousel className="w-full max-w-lg md:max-w-full p-10">
+          <Carousel className="w-full max-w-lg lg:max-w-full p-10">
             <CarouselContent>
               {Array.from({ length: 5 }).map((_, index) => (
                 <CarouselItem key={index} className="lg:basis-1/2">

@@ -53,9 +53,13 @@ const Footer = () => {
             elementum enim sollicitudin sed. Ut finibus pulvinar interdum. Proin
             sed neque in nisl ultrices euismod. Ut mattis turpis sed odio.
           </p>
-          <div className="flex gap-4">
-            <Twitter className="h-10 w-10 text-[#FFC653]" />
-            <Instagram className="h-10 w-10 text-[#FFC653]" />
+          <div className="flex gap-4 cursor-pointer">
+            <a href="">
+              <Twitter className="h-10 w-10 text-[#FFC653]" />
+            </a>
+            <a href="">
+              <Instagram className="h-10 w-10 text-[#FFC653]" />
+            </a>
           </div>
         </div>
       </div>

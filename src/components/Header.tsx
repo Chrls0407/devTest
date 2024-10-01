@@ -20,7 +20,7 @@ const Header = () => {
           <img src={HeaderLogo} alt="header-logo" />
         </a>
         {/* Nav menus */}
-        <div className="flex-1 flex items-center justify-between">
+        <div className="flex-1 hidden md:flex items-center justify-between  ">
           <div className="flex gap-4 font-[900]">
             {NavMenus.map((menu) => (
               <a
@@ -40,7 +40,7 @@ const Header = () => {
         </div>
       </div>
       <Separator orientation="vertical" className="m-4 text-white h-[30px]" />
-      <div className="flex items-center cursor-pointer gap-4">
+      <div className="hidden md:flex items-center cursor-pointer gap-4">
         <Twitter className="h-6 w-6 text-white" />
         <Instagram className="h-6 w-6 text-white" />
         <Button className="border-[#E60000] border rounded-none text-white font-[900] text-[1.2rem]">
@@ -50,8 +50,6 @@ const Header = () => {
           JOIN NOW
         </Button>
       </div>
-      {/* BUttons */}
-      <div></div>
     </nav>
   );
 };
